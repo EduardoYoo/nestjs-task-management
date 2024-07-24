@@ -1,0 +1,6 @@
+- nest new [project name] -> Creates project
+- yart start:dev -> Starts in developer mode
+- nest g module [name] -> Creates module template and updates root module
+- nest g controller [name] --no-spec -> Creates controller template (without spec file)
+- nest g service [name] --no-spec
+- 
