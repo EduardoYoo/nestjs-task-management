@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Task } from 'src/tasks/task.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
@@ -10,4 +11,8 @@ export class User {
 
   @Column()
   password: string;
+
+  //When eager is true, whenever a User object is fetched from the DB, the tasks will be fetched as well
+  @OneToMany((_type) => Task, (task) => task.user, { eager: true })
+  tasks: Task[];
 }
