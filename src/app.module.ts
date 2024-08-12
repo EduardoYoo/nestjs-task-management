@@ -30,6 +30,8 @@ import { configValidationSchema } from './config.schema';
           username: configService.get('DB_USERNAME'),
           password: configService.get('DB_PASSWORD'),
           database: configService.get('DB_DATABASE'),
+          migrationsRun: false,
+          migrations: ['dist/migrations/*.ts'],
         };
       },
     }),
