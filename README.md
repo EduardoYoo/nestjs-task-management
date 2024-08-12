@@ -24,7 +24,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A task management app that uses NestJS with TypeORM to interact with a PostgreSQL database.
+Based on the [Udemy](https://www.udemy.com/course/nestjs-zero-to-hero) course "NestJS Zero to Hero - Modern TypeScript Back-end Development".
+
+## Requirements
+
+Make sure you have [Node](https://nodejs.org/en/download/package-manager) and [Docker](https://www.docker.com/get-started/) installed in your machine.
 
 ## Installation
 
@@ -35,33 +40,18 @@ $ yarn install
 ## Running the app
 
 ```bash
-# development
-$ yarn run start
+# Create database
+$ yarn start:dev:db
 
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-To run PostgreSQL on Docker, run the following in your Terminal:
-
-```bash
-$ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+# Run the app
+$ yarn start:dev
 ```
 
 ## Test
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+# Unit tests
+$ yarn test
 ```
 
 ## Support
