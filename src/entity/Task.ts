@@ -1,7 +1,7 @@
 //Data Mapper Pattern
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { TaskStatus } from './task-status.enum';
-import { User } from '../auth/user.entity';
+import { TaskStatus } from '../tasks/task-status.enum';
+import { User } from '../entity/User';
 import { Exclude } from 'class-transformer';
 
 @Entity()

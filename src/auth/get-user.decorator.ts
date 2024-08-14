@@ -1,5 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { User } from './user.entity';
+import { User } from '../entity/User';
 
 //Get user without having to retrieve the whole request object
 export const GetUser = createParamDecorator(

@@ -1,5 +1,3 @@
-import { User } from 'src/auth/user.entity';
-import { Task } from 'src/tasks/task.entity';
 import { DataSource } from 'typeorm';
 
 export default new DataSource({
@@ -9,7 +7,7 @@ export default new DataSource({
   username: 'postgres',
   password: 'postgres',
   database: 'task_management',
-  entities: [Task, User],
+  entities: ['/src/entity/*.ts'],
   migrations: ['/src/migrations/*.ts'],
   migrationsRun: true,
   dropSchema: true,

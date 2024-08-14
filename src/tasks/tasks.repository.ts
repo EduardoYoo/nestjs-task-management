@@ -1,5 +1,5 @@
 import { DataSource, Repository } from 'typeorm';
-import { Task } from './task.entity';
+
 import {
   Injectable,
   InternalServerErrorException,
@@ -8,7 +8,8 @@ import {
 import { CreateTaskDto } from './dto/create-task.dto';
 import { TaskStatus } from './task-status.enum';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
-import { User } from '../auth/user.entity';
+import { User } from '../entity/User';
+import { Task } from '../entity/Task';
 
 @Injectable()
 export class TasksRepository extends Repository<Task> {
