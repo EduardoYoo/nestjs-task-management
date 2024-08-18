@@ -45,6 +45,9 @@ $ yarn start:dev:db
 
 # Run the app
 $ yarn start:dev
+
+#Optionally, add some data to the database
+$ yarn typeorm migration:run -d ./ormconfig.ts
 ```
 
 ## Test

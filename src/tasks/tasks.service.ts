@@ -22,7 +22,7 @@ export class TasksService {
   //Return task by ID
   async getTaskById(id: string, user: User): Promise<Task> {
     //Interacting with a database is an async operation
-    const found = await this.tasksRepository.findOne({ where: { id, user } }); //Only thee user can see their own tasks
+    const found = await this.tasksRepository.findOne({ where: { id, user } }); //Only the user can see their own tasks
 
     if (!found) {
       throw new NotFoundException(`Task with ID "${id}" not found`);

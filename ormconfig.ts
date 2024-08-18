@@ -7,9 +7,9 @@ export default new DataSource({
   username: 'postgres',
   password: 'postgres',
   database: 'task_management',
-  entities: ['/src/entity/*.ts'],
-  migrations: ['/src/migrations/*.ts'],
-  migrationsRun: true,
-  dropSchema: true,
+  entities: ['./src/entity/*.ts'],
+  migrations: ['./src/db/migrations/*.ts'],
+  migrationsRun: false,
+  dropSchema: false,
   synchronize: true,
 });
